@@ -1,24 +1,26 @@
-const skillList = [
-  { name: "React", color: "bg-blue-500" },
-  { name: "Node.js", color: "bg-green-500" },
-  { name: "JavaScript", color: "bg-yellow-400" },
-  { name: "HTML & CSS", color: "bg-orange-400" },
-  { name: "Tailwind CSS", color: "bg-teal-500" },
-  { name: "Git & GitHub", color: "bg-gray-500" },
-];
-
 export default function Skills() {
+  const skills = [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Git",
+    "GitHub",
+  ];
+
   return (
-    <section id="skills" className="py-20 text-center bg-slate-900">
-      <h2 className="text-4xl font-bold mb-10">Skills & Tech Stack</h2>
-      <div className="flex flex-wrap justify-center gap-6 px-6">
-        {skillList.map((skill) => (
-          <div
-            key={skill.name}
-            className={`px-6 py-4 rounded-lg text-white font-semibold shadow-lg ${skill.color}`}
+    <section id="skills" className="py-20 px-6 text-center">
+      <h2 className="text-3xl font-bold mb-10">Skills</h2>
+
+      <div className="flex flex-wrap justify-center gap-4">
+        {skills.map((skill, index) => (
+          <span
+            key={index}
+            className="bg-slate-800 px-5 py-2 rounded-lg hover:bg-blue-500 transition"
           >
-            {skill.name}
-          </div>
+            {skill}
+          </span>
         ))}
       </div>
     </section>
